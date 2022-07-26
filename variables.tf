@@ -14,16 +14,6 @@
  * limitations under the License.
  */
 
-
-variable "billing_account" {
-  # tfdoc:variable:source 00-bootstrap
-  description = "Billing account id and organization id ('nnnnnnnn' or null)."
-  type = object({
-    id              = string
-    organization_id = number
-  })
-}
-
 variable "folder_ids" {
   # tfdoc:variable:source 01-resman
   description = "Folder name => id mappings, the 'security' folder name must exist."
