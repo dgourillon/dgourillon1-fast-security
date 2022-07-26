@@ -88,17 +88,6 @@ variable "service_accounts" {
   })
 }
 
-variable "organization" {
-  # tfdoc:variable:source 00-bootstrap
-  description = "Organization details."
-  type = object({
-    domain      = string
-    id          = number
-    customer_id = string
-  })
-   default = locals.organization
-}
-
 variable "outputs_location" {
   description = "Path where providers, tfvars files, and lists for the following stages are written. Leave empty to disable."
   type        = string
