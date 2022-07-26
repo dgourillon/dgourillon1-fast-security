@@ -96,6 +96,7 @@ variable "organization" {
     id          = number
     customer_id = string
   })
+   default = locals.organization
 }
 
 variable "outputs_location" {
