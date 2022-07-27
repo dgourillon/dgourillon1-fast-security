@@ -32,7 +32,7 @@ locals {
       if lookup(var.vpc_sc_ingress_policies, i, null) != null
     ]
   }
-  organization = data.terraform_remote_state.bootstrap.outputs.organization
+
   # compute the number of projects in each perimeter to detect which to create
   vpc_sc_counts = {
     for k in local._perimeter_names : k => length(

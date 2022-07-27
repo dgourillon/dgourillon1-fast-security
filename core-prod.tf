@@ -15,9 +15,6 @@
  */
 
 locals {
-  billing_account   = data.terraform_remote_state.bootstrap.outputs.billing_account
-  service_accounts  = data.terraform_remote_state.resman.outputs.service_accounts
-  folder_ids  = data.terraform_remote_state.resman.outputs.folder_ids
 
   prod_kms_restricted_admins = [
     for sa in compact([
