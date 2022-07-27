@@ -27,9 +27,9 @@ locals {
 module "dev-sec-project" {
   source          = "./modules/project"
   name            = "dev-sec-core-0"
-  parent          = locals.folder_ids.security
+  parent          = local.folder_ids.security
   prefix          = var.prefix
-  billing_account = locals.billing_account.id
+  billing_account = local.billing_account.id
   iam = {
     "roles/cloudkms.viewer" = local.dev_kms_restricted_admins
   }

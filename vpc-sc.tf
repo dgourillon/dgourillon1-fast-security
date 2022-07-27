@@ -136,7 +136,7 @@ module "vpc-sc" {
   count         = anytrue([for k, v in local.vpc_sc_counts : v > 0]) ? 1 : 0
   access_policy = null
   access_policy_create = {
-    parent = "organizations/${locals.organization.id}"
+    parent = "organizations/${local.organization.id}"
     title  = "default"
   }
   access_levels = coalesce(try(var.vpc_sc_access_levels, null), {})
