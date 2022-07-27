@@ -18,8 +18,8 @@ locals {
 
   prod_kms_restricted_admins = [
     for sa in compact([
-      locals.service_accounts.project-factory-prod,
-      locals.service_accounts.data-platform-prod
+      local.service_accounts.project-factory-prod,
+      local.service_accounts.data-platform-prod
     ]) : "serviceAccount:${sa}"
   ]
 }

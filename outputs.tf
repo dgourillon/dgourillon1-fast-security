@@ -49,7 +49,7 @@ resource "local_file" "tfvars" {
 }
 
 resource "google_storage_bucket_object" "tfvars" {
-  bucket  = locals.automation.outputs_bucket
+  bucket  = local.automation.outputs_bucket
   name    = "tfvars/02-security.auto.tfvars.json"
   content = jsonencode(local.tfvars)
 }
