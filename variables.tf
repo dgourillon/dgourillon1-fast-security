@@ -60,16 +60,6 @@ variable "kms_keys" {
   default = {}
 }
 
-variable "service_accounts" {
-  # tfdoc:variable:source 01-resman
-  description = "Automation service accounts that can assign the encrypt/decrypt roles on keys."
-  type = object({
-    data-platform-dev    = string
-    data-platform-prod   = string
-    project-factory-dev  = string
-    project-factory-prod = string
-  })
-}
 
 variable "outputs_location" {
   description = "Path where providers, tfvars files, and lists for the following stages are written. Leave empty to disable."

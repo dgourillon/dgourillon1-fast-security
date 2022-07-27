@@ -24,6 +24,7 @@ locals {
   organization = data.terraform_remote_state.bootstrap.outputs.organization
   automation   = data.terraform_remote_state.bootstrap.outputs.automation
   billing_account   = data.terraform_remote_state.bootstrap.outputs.billing_account
+  service_accounts  = data.terraform_remote_state.bootstrap.outputs.service_accounts
 }
 
 
