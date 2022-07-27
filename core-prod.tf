@@ -26,7 +26,7 @@ locals {
 module "prod-sec-project" {
   source          = "./modules/project"
   name            = "prod-sec-core-0"
-  parent          = var.folder_ids.security
+  parent          = locals.folder_ids.security
   prefix          = var.prefix
   billing_account = locals.billing_account.id
   iam = {

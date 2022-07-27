@@ -14,13 +14,6 @@
  * limitations under the License.
  */
 
-variable "folder_ids" {
-  # tfdoc:variable:source 01-resman
-  description = "Folder name => id mappings, the 'security' folder name must exist."
-  type = object({
-    security = string
-  })
-}
 
 variable "groups" {
   # tfdoc:variable:source 00-bootstrap
