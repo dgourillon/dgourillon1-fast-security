@@ -25,7 +25,7 @@ locals {
 }
 
 module "prod-sec-project" {
-  source          = "./modules/project"
+  source          = "github.com/dgourillon/fast-fabric-modules/project"
   name            = "prod-sec-core-0"
   parent          = local.folder_ids.security
   prefix          = var.prefix
@@ -39,7 +39,7 @@ module "prod-sec-project" {
 
 module "prod-sec-kms" {
   for_each   = toset(local.kms_locations)
-  source     = "./modules/kms"
+  source     = "github.com/dgourillon/fast-fabric-modules/kms"
   project_id = module.prod-sec-project.project_id
   keyring = {
     location = each.key
